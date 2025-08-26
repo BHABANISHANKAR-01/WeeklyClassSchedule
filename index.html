@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Schedule & To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>Weekly Schedule & To-Do List</h1>
+        </header>
+
+        <!-- Schedule Section -->
+        <section class="schedule-section">
+            <div class="section-header">
+                <h2>Weekly Schedule</h2>
+                <div class="filter-controls">
+                    <div class="form-group">
+                        <label for="dayFilter" class="form-label">Filter by Day:</label>
+                        <select id="dayFilter" class="form-control day-filter">
+                            <option value="all">All Days</option>
+                            <option value="Monday">Monday</option>
+                            <option value="Tuesday">Tuesday</option>
+                            <option value="Wednesday">Wednesday</option>
+                            <option value="Thursday">Thursday</option>
+                            <option value="Friday">Friday</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="scheduleContainer" class="schedule-container">
+                <!-- Schedule cards will be populated by JavaScript -->
+            </div>
+        </section>
+
+        <!-- To-Do List Section -->
+        <section class="todo-section">
+            <div class="section-header">
+                <h2>To-Do List</h2>
+            </div>
+            
+            <div class="todo-form-container">
+                <form id="todoForm" class="todo-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="todoDate" class="form-label">Date:</label>
+                            <input type="date" id="todoDate" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="todoTime" class="form-label">Time:</label>
+                            <input type="time" id="todoTime" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="todoContent" class="form-label">Content:</label>
+                        <textarea id="todoContent" class="form-control" rows="3" placeholder="Enter your task or note..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn--primary">Add To-Do</button>
+                </form>
+            </div>
+
+            <div id="todoList" class="todo-list">
+                <!-- To-do items will be populated by JavaScript -->
+            </div>
+        </section>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
